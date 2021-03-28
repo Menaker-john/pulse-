@@ -1,0 +1,21 @@
+{
+  "name": "pulse",
+  "private": true,
+  "scripts": {
+    "start": "meteor run --settings settings-dev.json",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "bcrypt": "^5.0.1",
+    "meteor-node-stubs": "^1.0.1",
+    "react": "^16.13.1",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.13.1",
+    "react-mounter": "^1.2.0",
+    "react-widgets": "^4.6.1",
+    "recharts": "^2.0.8"
+  }
+}

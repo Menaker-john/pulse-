@@ -1,0 +1,77 @@
+.fieldsetTransition-enter {
+  max-height: 0px;
+  transition: max-height 300ms ease-in;
+  overflow: hidden;
+}
+
+.fieldsetTransition-enter.fieldsetTransition-enter-active {
+  height: auto;
+  max-height: 1000px;
+}
+
+.fieldsetTransition-leave {
+  max-height: 1000px;
+  transition: max-height 300ms ease-out;
+}
+
+.fieldsetTransition-leave.fieldsetTransition-leave-active {
+  overflow: hidden;
+  max-height: 0px;
+}
+
+.fa-caret-down{
+  transform: rotate(0deg);
+  transition: transform 300ms ease-out;
+}
+
+.fa-caret-down.closed{
+  transform: rotate(-90deg);
+  transition: transform 300ms ease-in;
+}
+
+.onRoute {
+   transform:rotate(0.05deg);
+   transition:all .05s;
+}
+.onRoute.in {
+  transform:rotate(1800deg);
+  transition:all .05s
+}
+
+:root {
+  --wiggle-speed:    10s;
+  --wiggle-rot:      0.00deg;
+  --wiggle-rot-neg: -0.00deg;
+}
+
+@-webkit-keyframes wiggle
+{
+    0% {-webkit-transform: rotateZ(var(--wiggle-rot));}
+    50% {-webkit-transform: rotateZ(var(--wiggle-rot-neg));}
+    100% {-webkit-transform: rotateZ(var(--wiggle-rot));}
+}
+@-moz-keyframes wiggle
+{
+    0% {-moz-transform: rotateZ(var(--wiggle-rot));}
+    50% {-moz-transform: rotateZ(var(--wiggle-rot-neg));}
+    100% {-moz-transform: rotateZ(var(--wiggle-rot));}
+}
+@-o-keyframes wiggle
+{
+    0% {-o-transform: rotateZ(var(--wiggle-rot));}
+    50% {-o-transform: rotateZ(var(--wiggle-rot-neg));}
+    100% {-o-transform: rotateZ(var(--wiggle-rot));}
+}
+@keyframes wiggle
+{
+    0% {transform: rotateZ(var(--wiggle-rot));}
+    50% {transform: rotateZ(var(--wiggle-rot-neg));}
+    100% {transform: rotateZ(var(--wiggle-rot));}
+}
+
+.wobble {
+    -webkit-animation: wiggle var(--wiggle-speed) ease infinite;
+    -moz-animation:    wiggle var(--wiggle-speed) ease infinite;
+    -o-animation:      wiggle var(--wiggle-speed) ease infinite;
+    animation:         wiggle var(--wiggle-speed) ease infinite;
+}
